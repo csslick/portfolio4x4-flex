@@ -1,0 +1,156 @@
+/* style.css */
+:root {
+  --text-color: #333;
+  --bg-color: #fff;
+}
+
+body {
+  font-size: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* 버튼 */
+.link-btn {
+  width: 134px;
+  padding: 10px 20px;
+  /* border: 1px solid #000; */
+  background: #fff;
+  align-self: center;
+  margin-top: 25px;
+}
+
+#main-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 330px;
+  height: 100vh;
+  background: #fff;
+  padding: 48px 52px;
+  transition: 0.4s;
+  opacity: 1;
+  transform: translateX(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#main-header.off {
+  transform: translateX(-330px);
+  position: fixed;
+  opacity: 0;
+}
+
+#main-header > h1 {
+  width: 100px;
+  height: 100px;
+  /* background: #333; */
+  margin: 0 auto;
+  margin-bottom: 97px;
+  text-align: center;
+}
+
+#main-header > h1 > small {
+  font-size: 12px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+#gnb > ul > li > a {
+  width: 226px;
+  height: 49px;
+  /* outline: 1px solid red; */
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sns {
+  position: absolute;
+  bottom: 48px;
+  left: 83px;
+}  
+
+.sns a {
+  margin-right: 25px;
+}
+
+/* main너비 = 100% - 330px */
+main {
+  background: #999;
+  float: left;
+  width: calc(100% - 330px);
+  padding-left: 330px;
+  box-sizing: content-box;
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+/* 메뉴 없을때 */
+main.full {
+  width: 100%;
+  padding-left: 0;
+}
+
+main > .box {
+  width: 50%;
+  height: 50%;
+  /* outline: 2px solid #333; */
+  text-align: center;
+  width: 50%;
+  float: left;
+} 
+
+/* 칼럼 콘텐츠 배경 */
+main > .box {
+  color: #fff;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 50px;
+}
+
+main > .box:nth-child(1) {
+  background-image: url(../images/bg01.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main > .box:nth-child(2) {
+  background-image: url(../images/bg02.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main > .box:nth-child(3) {
+  background-image: url(../images/bg03.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main > .box:nth-child(4) {
+  background-image: url(../images/bg04.jpg);
+  background-size: cover;
+  background-position: center;
+}
